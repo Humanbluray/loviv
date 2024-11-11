@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "loviv-app"
+version = "0.1.0"
+description = "for loviv sarl to sell them products"
+authors = ["Humanbluray <vancarlosfr@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flet = "^0.24.1"
+supabase = "^2.10.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
