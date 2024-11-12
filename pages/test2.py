@@ -1,39 +1,39 @@
-import win32print
-import win32api
-import os
-
-
-def print_file(filename):
-    # Obtenir l'imprimante par défaut
-    printer_name = win32print.GetDefaultPrinter()
-
-    # Envoyer le fichier à l'imprimante par défaut
-    print("Envoi du fichier à l'imprimante:", printer_name)
-
-    try:
-        win32api.ShellExecute(
-            0,
-            "print",
-            filename,
-            f'/d:"{printer_name}"',
-            ".",
-            0
-        )
-        print("Impression lancée avec succès.")
-    except Exception as e:
-        print("Erreur lors de l'impression :", e)
-
-
-if __name__ == "__main__":
-    # Nom du fichier à imprimer (remplace par le chemin de ton fichier)
-    filename = "../bull prim.pdf"
-
-    # Vérifie si le fichier existe avant l'impression
-    if os.path.exists(filename):
-        print_file(filename)
-    else:
-        print(f"Le fichier '{filename}' n'existe pas.")
-
+# import win32print
+# import win32api
+# import os
+#
+#
+# def print_file(filename):
+#     # Obtenir l'imprimante par défaut
+#     printer_name = win32print.GetDefaultPrinter()
+#
+#     # Envoyer le fichier à l'imprimante par défaut
+#     print("Envoi du fichier à l'imprimante:", printer_name)
+#
+#     try:
+#         win32api.ShellExecute(
+#             0,
+#             "print",
+#             filename,
+#             f'/d:"{printer_name}"',
+#             ".",
+#             0
+#         )
+#         print("Impression lancée avec succès.")
+#     except Exception as e:
+#         print("Erreur lors de l'impression :", e)
+#
+#
+# if __name__ == "__main__":
+#     # Nom du fichier à imprimer (remplace par le chemin de ton fichier)
+#     filename = "../bull prim.pdf"
+#
+#     # Vérifie si le fichier existe avant l'impression
+#     if os.path.exists(filename):
+#         print_file(filename)
+#     else:
+#         print(f"Le fichier '{filename}' n'existe pas.")
+#
 
 # self.order_details = ft.AlertDialog(
         #     title=ft.Row(
